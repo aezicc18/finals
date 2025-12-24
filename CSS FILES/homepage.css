@@ -1,0 +1,578 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+}
+ul li{
+    list-style: none;
+}
+.navbar{
+    height: clamp(1rem, 7vh, 10rem);
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    .navUl{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: clamp(2rem, 12vw, 15rem);
+        box-sizing: border-box;
+        padding-right: clamp(1.2rem, 2.625vw, 9rem);
+
+        .click{
+            width: 5rem;
+            height: 100%;
+            margin-left: clamp(4rem, 10vh, 40rem);
+
+            .logo{
+                height: clamp(3rem, 3.5vw, 9rem);
+                width: clamp(3.3rem, 4.5vw, 9rem);
+                cursor: pointer;
+                background-image: url(/images/cvsu.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: transparent;
+            }
+        }
+        .navCont{
+            width: 40%;
+            height: clamp(1rem, 7vh, 10rem);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            box-sizing: border-box;
+
+            li{
+                height: 100%;
+                width: fit-content;
+                flex: 1;
+                padding: 1rem;
+                text-align: center;
+                box-sizing: border-box;
+                border: 0.1rem solid transparent;
+                
+                &:hover{
+                    background-color: rgb(146, 33, 33);
+                }
+                
+                a{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                    font-weight: 700;
+                }
+            }
+            
+        }
+        .btnCont{
+            width: 20%; 
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            button{
+                width: 7vw;
+                height: 4vh;
+                border-radius: 1rem;
+                font-size: clamp(0.4rem, 0.875vw, 3rem);
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &:active{
+                    transform: translateY(0.1rem);
+                }
+            }
+            .btn{
+                background-color: transparent;
+                border: 0.1rem solid black;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 1);
+                    color: white;
+                }
+            }
+            .btn1{
+                background-color: rgba(0, 0, 0, 1);
+                color: white;
+
+                &:hover{
+                    background-color: transparent;
+                    border: 0.1rem solid black;
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+
+.landPage{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(53, 179, 41);
+
+    .landPageText{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+        .mainText{
+            width: 70vw;
+            height: 7vh;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1rem, 3.4vw, 5rem);
+            background-color: antiquewhite;
+        }
+        .subText{
+            width: 50vw;
+            height: 10vh;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(1rem, 1.8vw, 4.5rem);
+            text-align: center;
+                        background-color: rgb(250, 215, 245);
+        }
+        .btnContain{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            .landPageBtn{
+                width: 12vw;
+                height: 5.5vh;
+                border-radius: 1rem;
+                font-size: clamp(0.6rem, 1.2vw, 4.5rem);
+                background-color: red;
+                color: white;
+                font-weight: 700;
+                box-shadow: 0.1rem 0.2rem gray;
+
+                &:hover{
+                    background-color: rgb(255, 255, 255);
+                    color: red;
+                    border: solid 0.05rem red;
+                    padding: 0;
+                    cursor: pointer;
+                }
+
+                &:active{
+                    transform: translateY(0.1rem);
+                    box-shadow: 0.1rem 0.2rem rgb(128, 28, 28);
+                }
+            }
+            .landPageBtn1{
+                width: 8vw;
+                height: 5vh;
+                border-radius: 1rem;
+                font-size: clamp(0.6rem, 1.2vw, 4.5rem);
+                font-weight: 700;
+                box-shadow: 0.1rem 0.2rem gray;
+                color: red;
+                
+                &:hover{
+                    background-color: red;
+                    color: white;
+                    border: solid 0.05rem white;
+                    padding: 0;
+                    cursor: pointer;
+                }
+                
+                &:active{
+                    transform: translateY(0.1rem);
+                    box-shadow: 0.1rem 0.2rem rgb(128, 28, 28);
+                }
+            }
+
+        }
+    }
+    .image{
+        width: 50vw;
+        height: 35vh;
+        background-color: rgb(255, 255, 255);
+        border-radius: 2rem;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.information{
+    width: 100%;
+    height: 90vh;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 10vh;
+    gap: 5rem;
+
+    .titleText{
+    width: 80vw;
+    height: 10vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(2.4rem, 4.85vw, 18rem);
+    }
+    .contain{
+        width: 86%;
+        height: 60vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: aquamarine;
+        border-radius: 1rem;
+
+        .image1{
+        width: 40vw;
+        height: 45vh;
+        background-color: rgb(255, 255, 255);
+        border-radius: 1rem;
+        }
+
+        .infos{
+            width: 35vw;
+            height: 45vh;
+            border-radius: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: clamp(0.8rem, 1.75vw, 6rem);
+
+        }
+    }
+}
+
+.topTutors{
+    width: 100%;
+    height: 130vh;
+    background-color: rgb(43, 107, 107);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding-top: 5rem;
+    gap: clamp(4.8rem, 10.5vw, 36rem);
+
+    .titleText1{
+        width: 80vw;
+        height: 20vh;
+        border-radius: clamp(0.4rem, 0.875vw, 3rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .h1Text{
+            font-size: clamp(1.8rem, 4.1vw, 14rem);
+            font-weight: 700;
+            height: 16vh;
+        }
+        .h3Text{
+            font-size: clamp(0.8rem, 1.75vw, 6rem);
+            margin-bottom: 1.5rem;
+        }
+        .h5Text{
+            font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+            width: 60vw;
+        }
+    }
+    .topTutorsContain{
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .tutor{
+            width: 21vw;
+            height: 97vh;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: clamp(0.4rem, 0.875vw, 3rem); 
+
+            .image2{
+                width: 20vw;
+                height: 55vh;
+                background-color: white;
+            }
+            .text{
+                width: 21vw;
+                height: 35vh;
+                font-size: clamp(0.8rem, 1.75vw, 6rem);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: start;
+                gap: 1rem;
+                padding-left: 2rem;
+                padding-top: 1rem;   
+            
+                .name{
+                    width: 90%;
+                    height: 4vh;
+                    font-size: clamp(1.2rem, 2.5vw, 9rem);
+                    text-align: left;
+                }
+                
+                .program{
+                    flex-shrink: 0;
+                    width: fit-content;
+                    height: 1rem;
+                    font-size: clamp(0.45rem, 1vw, 4.5rem);
+                    border-radius: 1rem;
+                    background-color: transparent;
+                    text-align: left;
+                    padding: 0.5rem;
+                    border: 0.1rem solid black;
+                }
+                
+                .tutorInfo{
+                    width: 90%;
+                    height: 20vh;
+                    text-align: left;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                }
+
+            }
+        }
+    }
+
+}
+
+
+.reviews{
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(126, 100, 67);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 4rem;
+}
+.titleText{
+    width: 80vw;
+    height: 10vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(2.4rem, 4.85vw, 18rem);
+}
+.contain1, .contain2{
+    width: 100%;
+    height: 34vh;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+}
+.contain1{
+    margin-top: 3rem;
+}
+.contain1::-webkit-scrollbar, .contain2::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    width: 200%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    animation: carousel 40s infinite linear;
+    padding-right: 1em;
+}
+.group2{
+    width: 200%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    gap: 1rem;
+    animation: carousel_reversed 40s infinite linear;
+    padding-right: 1em;
+}
+.comment{
+    flex: 0 0 32vh;
+    width: 17%;
+    height: 32vh;
+    background-color: azure;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content{
+    width: 90%;
+    height: 22vh;
+    text-align: left;
+    font-size: clamp(0.6rem, 1.15vw, 4.5rem);;
+}
+.account{
+    width: 90%;
+    height: 7vh;
+    border: 0;
+    border-top: 0.1rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.acntLogo{
+    width: 20%;
+    height: 7vh;
+    background-color: aquamarine;
+}
+.acntName{
+    width: 80%;
+    height: 7vh;
+}
+.main, .user{
+    width: 100%;
+    height: 3.5vh;
+    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+@keyframes carousel {
+    from {translate: 0}
+    to {translate: -100%}
+}
+@keyframes carousel_reversed {
+    from {translate: -100%}
+    to {translate: 0}
+}
+.footer{
+    width: 100%;
+    height: 15vw;
+    background-color: rgb(0, 0, 0);
+    
+    .upper{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.4rem, 0.88vw, 3rem);
+        color: antiquewhite;
+        
+        h1{
+            font-size: clamp(0.6rem, 1.313vw, 4.5rem);
+        }
+
+        .links, .contacts{
+            width: 20%;
+            height: 95%;
+            box-sizing: border-box;
+            padding-top: clamp(0.4rem, 0.88vw, 3rem);
+        }
+
+        .emailLink{
+            width: 20%;
+            height: 95%;
+            box-sizing: border-box;
+            padding-top: clamp(0.4rem, 0.88vw, 3rem);
+
+            .emailSend{
+                margin-top: 0.5rem;
+                width: 100%;
+                height: 35%;
+                background-color: aquamarine;
+                display: flex;
+
+                .email{
+                    width: 87%;
+                    height: 100%;
+                }
+                .send{
+                    width: 13%;
+                    height: 100%;
+                }
+            }
+
+        }
+    }
+    
+    .lower{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        
+
+        .line{
+            width: 90%;
+            height: 100%;
+            background-color: transparent;
+            border: 0;
+            border-top: 0.1rem solid grey;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .icons{
+                width: 20%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .socials{
+                    width: 20%;
+                    height: 80%;
+                    background-color: antiquewhite;
+                    border-radius: 50%;
+                }
+            }
+            h1{
+                color: white;
+                font-size: clamp(0.4rem, 0.88vw, 3rem);
+            }
+        }
+    }
+    
+}
