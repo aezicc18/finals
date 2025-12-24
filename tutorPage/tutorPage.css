@@ -1,0 +1,544 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+}
+ul li{
+    list-style: none;
+}
+.navbar{
+    height: clamp(1rem, 7vh, 10rem);
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    .navUl{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: clamp(2rem, 12vw, 15rem);
+        box-sizing: border-box;
+        padding-right: clamp(1.2rem, 2.625vw, 9rem);
+
+        .click{
+            width: 5rem;
+            height: 100%;
+            margin-left: clamp(4rem, 10vh, 40rem);
+
+            .logo{
+                height: clamp(3rem, 3.5vw, 9rem);
+                width: clamp(3.3rem, 4.5vw, 9rem);
+                cursor: pointer;
+                background-image: url(/images/cvsu.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: transparent;
+            }
+        }
+        .navCont{
+            width: 40%;
+            height: clamp(1rem, 7vh, 10rem);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            box-sizing: border-box;
+
+            li{
+                height: 100%;
+                width: fit-content;
+                flex: 1;
+                padding: 1rem;
+                text-align: center;
+                box-sizing: border-box;
+                border: 0.1rem solid transparent;
+                
+                &:hover{
+                    background-color: rgb(146, 33, 33);
+                }
+                
+                a{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                    font-weight: 700;
+                }
+            }
+            
+        }
+        .btnCont{
+            width: 20%; 
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            button{
+                width: 7vw;
+                height: 4vh;
+                border-radius: 1rem;
+                font-size: clamp(0.4rem, 0.875vw, 3rem);
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &:active{
+                    transform: translateY(0.1rem);
+                }
+            }
+            .btn{
+                background-color: transparent;
+                border: 0.1rem solid black;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 1);
+                    color: white;
+                }
+            }
+            .btn1{
+                background-color: rgba(0, 0, 0, 1);
+                color: white;
+
+                &:hover{
+                    background-color: transparent;
+                    border: 0.1rem solid black;
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: #90bdee;
+    box-sizing: border-box;
+    padding: clamp(1rem, 6vw, 10rem) clamp(0.4rem, 1.5vw, 3.5rem) clamp(0.47rem, 2vw, 4.5rem);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a{
+        text-decoration: none;
+    }
+
+    .left{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        box-sizing: border-box;
+        padding-left: clamp(1.2rem, 2.625vw, 9rem);
+
+        .back{
+            width: clamp(3rem, 10vw, 15rem);
+            height: clamp(1rem, 3vw, 3rem);
+            background-color: transparent;
+            font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+        }
+
+        .names{
+            width: clamp(3rem, 25vw, 30rem);
+
+            .Name{
+                background-color: rgb(30, 190, 190);
+                font-size: clamp(1rem, 4vw, 8rem);
+                width: clamp(3rem, 25vw, 30rem);
+                line-height: 85%;
+                background-color: transparent;
+            }
+
+            .tier{
+                margin-top: clamp(0.4rem, 0.875vw, 3rem);
+                font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+            }
+        }
+
+
+        .desc{
+            background-color: whitesmoke;
+            width: clamp(3rem, 20vw, 25rem);
+            height: clamp(4rem, 22vw, 28rem);
+            border-radius: clamp(0.8rem, 1.75vw, 6rem);
+            font-size: clamp(0.8rem, 1.75vw, 6rem);
+            text-align: center;
+        }
+    }
+
+    .center{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-top: clamp(1.2rem, 2.625vw, 9rem);
+        gap: clamp(1.2rem, 3vw, 9rem);
+
+        .prof{
+            background-color: azure;
+            width: 80%;
+            height: 80%;
+            font-size: clamp(1.2rem, 2.625vw, 9rem);
+            text-align: center;
+        }
+
+        .req{
+            width: clamp(3rem, 20vw, 30rem);
+            height: clamp(2rem, 3.3vw, 5rem);
+            border-radius: clamp(0.8rem, 1.75vw, 6rem) ;
+            background-color: antiquewhite;
+            font-size: clamp(0.8rem, 1.75vw, 6rem);
+            cursor: pointer;
+        }
+    }
+
+    .right{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: end;
+        box-sizing: border-box;
+        padding-right: clamp(0.8rem, 1.75vw, 6rem);
+
+        .subj{
+            background-color: rgba(255, 255, 255, 0.3);
+            width: clamp(4rem, 30vw, 28rem);
+            height: fit-content;
+            border-radius: clamp(0.4rem, 0.875vw, 3rem);
+            display: flex;
+            justify-content: start;
+            padding: clamp(0.8rem, 1.75vw, 6rem) ;
+            gap: clamp(0.2rem, 0.437vw, 1.5rem);
+            align-items: center;
+            flex-direction: column;
+            box-sizing: border-box;
+
+            .subj1{
+                width: clamp(10rem, 19vw, 30rem);
+                height: clamp(0.5rem, 3vw, 12rem);
+                background-color: antiquewhite;
+                border-radius: clamp(0.8rem, 1.75vw, 6rem);
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            
+                .rightCont{
+                    width: 80%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                
+                    .subject{
+                        width: 40%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-sizing: border-box;
+                        font-size: clamp(0.8rem, 1.5cqw, 6rem);
+                        white-space: nowrap;
+                    }
+
+                    .infos{
+                        width: 40%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .subjectPrice, .subjectSession{
+                            font-size: clamp(0.4rem, 0.875vw, 3rem);
+                        }
+
+                        .subjectPrice{
+                            border-bottom: black solid clamp(0.04rem, 0.087vw, 0.3rem);
+                        }
+                    }
+                }
+
+
+                .cont{
+                    width: 20%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .checkbox{
+                        width: clamp(0.8rem, 1.5vw, 6rem);
+                        height: clamp(0.8rem, 1.5vw, 6rem);
+                    }
+                }
+            }
+        }
+    }
+        .type{
+            background-color: rgb(48, 150, 108);
+            width: clamp(4rem, 30vw, 28rem);
+            height: clamp(2rem, 11vw, 20rem);
+            border-radius: clamp(0.4rem, 0.875vw, 3rem);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding-top: clamp(0.2rem, 0.437vw, 1.5rem);
+
+            h1{
+                font-size: clamp(0.8rem, 1.75vw, 6rem);
+            }
+
+            .container{
+                width: 100%;
+                height: 90%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            .option{
+                width: 45%;
+                height: 85%;
+                background-color: aquamarine;
+                border-radius: clamp(0.8rem, 1.75vw, 6rem);
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                h1{
+                    width: 60%;
+                    height: 80%;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                }
+
+                input[type="radio"]{
+                    appearance: none;
+                    width: 2vw;
+                    height: 2vw;
+                    border-radius: 50%;
+                    border: clamp(0.08rem, 0.175vw, 0.6rem) solid #ffffff;
+                    background-color: rgb(161, 47, 47);
+                }
+                input[type="radio"]:checked {
+                    background-color: #ffffff;
+                    border: 5px solid rgb(161, 47, 47);
+                    box-shadow: 0 0 0 2px #ffffff;
+                }
+            }
+
+        }
+
+        .price{
+            background-color: brown;
+            width: clamp(4rem, 30vw, 28rem);
+            height: clamp(4rem, 15vw, 28rem);
+            border-radius: clamp(0.4rem, 0.875vw, 3rem);
+            box-sizing: border-box;
+            padding-top: clamp(0.2rem, 0.437vw, 1.5rem);
+            gap: clamp(0.2rem, 0.437vw, 1.5rem);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+
+            .code{
+                width: 95%;
+                height: clamp(0.5rem, 2.5vw, 9rem);
+                background-color: #90bdee;
+                border-radius: clamp(0.8rem, 1.75vw, 6rem);
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: clamp(0.4rem, 0.875vw, 3rem);
+                
+                .codes{
+                    background-color: transparent;
+                    width: 88%;
+                    height: 100%;
+                    padding-left: clamp(0.6rem, 1.25vw, 4.5rem);
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                    box-sizing: border-box;
+                }
+                .checker{
+                    background-color: #ffffff;
+                    width: 2.3vw;
+                    height: 2.3vw;
+                    border-radius: 50%;
+                    margin-right: clamp(0.08rem, 0.175vw, 0.6rem);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                    cursor: pointer;
+                }
+            }
+            
+            .tutPrice{
+                width: 95%;
+                height: clamp(4rem, 11vw, 20rem);
+                background-color: antiquewhite;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                gap: clamp(0.2rem, 0.437vw, 1.5rem);
+                flex-direction: column;
+                border-radius: 10%;
+
+                .typePrice, .subjPrice, .discPrice{
+                    width: 95%;
+                    height: clamp(1rem, 2.5vw, 10rem);
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;                    
+                }
+
+                .typePrice, .discPrice{
+                    border-top: rgb(117, 116, 116) dotted clamp(0.08rem, 0.175vw, 0.6rem);
+                    box-sizing: border-box;
+                }
+
+                .title{
+                    width: 80%;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                }
+                
+                .itemPrice{
+                    width: 20%;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                }
+                
+                .itemPrice1{
+                    width: 20%;
+                    font-size: clamp(0.8rem, 1.75vw, 6rem);
+                }
+
+                .totalPrice{
+                    width: 100%;
+                    padding: 0 clamp(0.2rem, 0.437vw, 1.5rem);
+                    height: clamp(1rem, 3vw, 10rem);
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-top: rgb(117, 116, 116) solid clamp(0.08rem, 0.175vw, 0.6rem);
+                    box-sizing: border-box;
+                }
+            }
+
+        }
+}
+.footer{
+    width: 100%;
+    height: 15vw;
+    background-color: rgb(0, 0, 0);
+    
+    .upper{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.4rem, 0.88vw, 3rem);
+        color: antiquewhite;
+        
+        h1{
+            font-size: clamp(0.6rem, 1.313vw, 4.5rem);
+        }
+
+        .links, .contacts{
+            width: 20%;
+            height: 95%;
+            box-sizing: border-box;
+            padding-top: clamp(0.4rem, 0.88vw, 3rem);
+        }
+
+        .emailLink{
+            width: 20%;
+            height: 95%;
+            box-sizing: border-box;
+            padding-top: clamp(0.4rem, 0.88vw, 3rem);
+
+            .emailSend{
+                margin-top: 0.5rem;
+                width: 100%;
+                height: 35%;
+                background-color: aquamarine;
+                display: flex;
+
+                .email{
+                    width: 87%;
+                    height: 100%;
+                }
+                .send{
+                    width: 13%;
+                    height: 100%;
+                }
+            }
+
+        }
+    }
+    
+    .lower{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        
+
+        .line{
+            width: 90%;
+            height: 100%;
+            background-color: transparent;
+            border: 0;
+            border-top: 0.1rem solid grey;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .icons{
+                width: 20%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .socials{
+                    width: 20%;
+                    height: 80%;
+                    background-color: antiquewhite;
+                    border-radius: 50%;
+                }
+            }
+            h1{
+                color: white;
+                font-size: clamp(0.4rem, 0.88vw, 3rem);
+            }
+        }
+    }
+    
+}

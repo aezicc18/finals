@@ -1,0 +1,595 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 16px;
+}
+ul li{
+    list-style: none;
+}
+.navbar{
+    height: clamp(1rem, 7vh, 10rem);
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    .navUl{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: clamp(2rem, 12vw, 15rem);
+        box-sizing: border-box;
+        padding-right: clamp(1.2rem, 2.625vw, 9rem);
+
+        .click{
+            width: 5rem;
+            height: 100%;
+            margin-left: clamp(4rem, 10vh, 40rem);
+
+            .logo{
+                height: clamp(3rem, 3.5vw, 9rem);
+                width: clamp(3.3rem, 4.5vw, 9rem);
+                cursor: pointer;
+                background-image: url(/images/cvsu.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: transparent;
+            }
+        }
+        .navCont{
+            width: 40%;
+            height: clamp(1rem, 7vh, 10rem);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            box-sizing: border-box;
+
+            li{
+                height: 100%;
+                width: fit-content;
+                flex: 1;
+                padding: 1rem;
+                text-align: center;
+                box-sizing: border-box;
+                border: 0.1rem solid transparent;
+                
+                &:hover{
+                    background-color: rgb(146, 33, 33);
+                }
+                
+                a{
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: clamp(0.6rem, 1.25vw, 4.5rem);
+                    font-weight: 700;
+                }
+            }
+            
+        }
+        .btnCont{
+            width: 20%; 
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            button{
+                width: 7vw;
+                height: 4vh;
+                border-radius: 1rem;
+                font-size: clamp(0.4rem, 0.875vw, 3rem);
+                font-weight: 700;
+                text-decoration: none;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                &:active{
+                    transform: translateY(0.1rem);
+                }
+            }
+            .btn{
+                background-color: transparent;
+                border: 0.1rem solid black;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 1);
+                    color: white;
+                }
+            }
+            .btn1{
+                background-color: rgba(0, 0, 0, 1);
+                color: white;
+
+                &:hover{
+                    background-color: transparent;
+                    border: 0.1rem solid black;
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+.main{
+    background-color: rgb(148, 197, 181);
+    width: 100%;
+    height: fit-content;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+
+    .infos{
+        margin-top: 5vh;
+        width: clamp(30rem, 70vw, 90rem);
+        height: clamp(20rem, 62vh, 90rem);
+        background-color: aqua;
+        border-radius: 1rem;
+        position: relative;
+
+        .picture{
+            margin: clamp(1rem, 2vw, 3rem);
+            width: clamp(5rem, 13vw, 20rem);
+            height: clamp(8rem, 42vh, 25rem);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+
+            .pic{
+                width: clamp(5rem, 13vw, 20rem);
+                background-color: rgb(81, 104, 96);
+                height: clamp(5rem, 23.7vh, 20rem);
+
+                border-radius: 1rem;
+            }
+            
+            .addProf{
+                width: clamp(3rem, 13vw, 15rem);
+                height: clamp(1rem, 5.4vh, 13rem);
+                border-radius: 1rem;
+            }
+
+            .removeProf{
+                width: clamp(3rem, 13vw, 15rem);
+                height: clamp(1rem, 5.4vh, 13rem);
+                border-radius: 1rem;
+            }
+        }
+
+        .fullName{
+            width: clamp(10rem, 47vw, 55rem);
+            height: clamp(1rem, 6.4vh, 13rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 8%;
+            left: 27.5%;
+        }
+        .age{
+            width: clamp(4rem, 23vw, 26.5rem);
+            height: clamp(1rem, 6.4vh, 13rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 20%;
+            left: 27.5%;
+        }
+        .gender{
+            width: clamp(4rem, 21.5vw, 26.5rem);
+            height: clamp(1rem, 6.4vh, 13rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 20%;
+            left: 63.5%;
+        }
+
+        .city{
+            width: clamp(4rem, 23vw, 26.5rem);
+            height: clamp(1rem, 6.4vh, 13rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 33%;
+            left: 27.5%;
+        }
+        .number{
+            width: clamp(4rem, 21.5vw, 26.5rem);
+            height: clamp(1rem, 6.4vh, 13rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 33%;
+            left: 63.5%;
+        }
+        .email{
+            width: clamp(4rem, 47vw, 70rem);
+            height: clamp(1rem, 6.4vh, 13rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 46%;
+            left: 27.5%;
+        }
+        h1{
+            position: absolute;
+            top: 60%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            font-size: clamp(1rem, 2vw, 5rem);
+        }
+        .description{
+            width: clamp(5rem, 47vw, 55rem);
+            height: clamp(5rem, 18.2vh, 30rem);
+            background-color: black;
+            border-radius: 1rem;
+            position: absolute;
+            top: 64%;
+            left: 27.5%;
+        }
+        .save{
+                width: clamp(3rem, 10vw, 15rem);
+                height: clamp(1rem, 4.55vh, 13rem);
+                border-radius: 1rem;
+                position: absolute;
+                top: 86%;
+                left: 5%;
+        }
+
+    }
+
+    .tutors{
+        box-sizing: border-box;
+        width: clamp(30rem, 70vw, 90rem);
+        padding: clamp(0.7rem, 1vw, 4rem);
+        height: clamp(20rem, fit-content, 90rem);
+        background-color: aqua;
+        border-radius: 1rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: start;
+        align-items: center;
+
+        .activeTuts{
+            padding: clamp(0.7rem, 1vw, 4rem);
+            width: clamp(25rem, 65vw, 80rem);
+            height: clamp(10rem, fit-content, 100rem);
+            background-color: aquamarine;
+            position: relative;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: 1rem;
+
+            .curr{
+                font-size: clamp(1rem, 2vw, 5rem);
+            }
+
+            .tut1{
+                width: clamp(15rem, 62vw, 90rem);
+                height: clamp(5rem, 9.1vh, 55rem);
+                position: relative;
+
+
+                .currTut{
+                    background-color: beige;
+                    width: clamp(2rem, 4.6vw, 10rem);
+                    height: clamp(2rem, 8.8vh, 10rem);
+                    border-radius: clamp(2rem, 4.6vw, 10rem);
+                    margin-left: clamp(0.2rem, 0.5vw, 1rem);
+                }
+                
+                .progress{
+                    background-color: black;
+                    width: clamp(10rem, 55vw, 76rem);
+                    height: clamp(1rem, 2.7vh, 10rem);
+                    position: absolute;
+                    top: 53%;
+                    left: 53%;
+                    transform: translate(-50%, -50%);
+                    border-radius: clamp(1rem, 2vw, 5rem);
+                }
+                .name{
+                    position: absolute;
+                    top: 5%;
+                    left: 10%;
+                    font-size: clamp(0.8rem, 1.3vw, 3rem);
+                }
+                .session{
+                    position: absolute;
+                    top: 70%;
+                    left: 89%;
+                    font-size: clamp(0.6rem, 1vw, 2.5rem);
+                }
+            }
+        }
+        .tutorReq{
+            padding: clamp(0.7rem, 1vw, 4rem);
+            width: clamp(25rem, 65vw, 80rem);
+            height: clamp(10rem, fit-content, 100rem);
+            background-color: aquamarine;
+            position: relative;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            gap: 1rem;
+
+            .reqText{
+                font-size: clamp(1rem, 2vw, 5rem);
+            }
+            
+            .req{
+                width: clamp(15rem, 62vw, 90rem);
+                height: clamp(5rem, fit-content, 55rem);
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2.0003vw;
+
+                .reqTutor{
+                    width: clamp(7.5rem, 30vw, 45rem);
+                    height: clamp(5rem, 9.11vh, 55rem);
+                    position: relative;
+                    background-color: rgb(76, 126, 126);
+                    box-sizing: border-box;
+                    padding: clamp(0.3rem, 0.2vw, 3rem);
+
+                    .reqProf{
+                        background-color: rgb(77, 77, 19);
+                        width: clamp(2rem, 4.6vw, 10rem);
+                        height: clamp(2rem, 8.3vh, 10rem);
+                        border-radius: clamp(2rem, 4.6vw, 10rem);
+                    }
+                    .name{
+                        position: absolute;
+                        top: 4%;
+                        left: 20%;
+                        font-size: clamp(1rem, 1.5vw, 5rem);
+                    }
+                    .type{
+                        position: absolute;
+                        top: 34%;
+                        left: 60%;
+                        font-size: clamp(1rem, 1.3vw, 5rem);
+                    }
+                    .amount{
+                        position: absolute;
+                        top: 34%;
+                        left: 20%;
+                        font-size: clamp(1rem, 1.5vw, 5rem);
+                    }
+                    .status{
+                        position: absolute;
+                        top: 60%;
+                        left: 20%;
+                        font-size: clamp(1rem, 1.5vw, 5rem);
+                    }
+
+                }
+            }
+            .reqTutorBtn{
+                width: clamp(5rem, 10vw, 20rem);
+                height: clamp(2rem, 5.46vh, 16rem);
+                border-radius: clamp(0.5rem, 0.5vw, 3rem);
+                background-color: rgb(96, 55, 160);
+            }
+
+        }
+    }
+    .changePass{
+        padding: clamp(0.7rem, 1vw, 4rem);
+        width: clamp(25rem, 68vw, 80rem);
+        height: clamp(10rem, 27.4vh, 100rem);
+        background-color: rgb(49, 95, 155);
+        position: relative;
+        border-radius: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+
+        .changeText{
+            font-size: clamp(1rem, 2vw, 5rem);
+        }
+        
+        .currPass{
+            width: clamp(10rem, 30vw, 50rem);
+            height: clamp(2rem, 4.55vh, 15rem);
+            border-radius: clamp(0.2rem, 0.5vw, 1rem);
+            background-color: chocolate;
+            position: absolute;
+            top: 23%;
+            left: 30%;
+        }
+
+        .currPassTxt{
+            position: absolute;
+            top: 23%;
+            left: 5.5%;
+            font-size: clamp(1rem, 2vw, 5rem);
+            font-weight: 700;
+        }
+
+        .newPass{
+            width: clamp(10rem, 30vw, 50rem);
+            height: clamp(2rem, 4.55vh, 15rem);
+            border-radius: clamp(0.2rem, 0.5vw, 1rem);
+            background-color: chocolate;
+            position: absolute;
+            top: 40%;
+            left: 30%;
+        }
+
+        .newPassTxt{
+            position: absolute;
+            top: 40%;
+            left: 5.5%;
+            font-size: clamp(1rem, 2vw, 5rem);
+            font-weight: 700;
+        }
+
+        .confirmPass{
+            width: clamp(10rem, 30vw, 50rem);
+            height: clamp(2rem, 4.55vh, 15rem);
+            border-radius: clamp(0.2rem, 0.5vw, 1rem);
+            background-color: chocolate;
+            position: absolute;
+            top: 57%;
+            left: 30%;
+        }
+
+        .confirmPassTxt{
+            position: absolute;
+            top: 57%;
+            left: 5.5%;
+            font-size: clamp(1rem, 2vw, 5rem);
+            font-weight: 700;
+        }
+
+        .texts{
+            padding: clamp(0.5rem, 1vw, 2rem);
+            width: clamp(4rem, 15vw, 30rem);
+            height: clamp(3.5rem, 12.76vh, 20rem);
+            position: absolute;
+            top: 21%;
+            left: 74.3%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background-color: aqua;
+            border-radius: clamp(0.2rem, 0.6vw, 1rem);
+
+            .one{
+                font-size: clamp(0.75rem, 1.5vw, 3.75rem);
+            }
+            .two, .three, .four{
+                font-size: clamp(0.5rem, 1vw, 2.5rem);
+            }
+        }
+
+        .saveChange{
+            width: clamp(3rem, 10vw, 15rem);
+            height: clamp(1rem, 4.55vh, 13rem);
+            border-radius: 1rem;
+            position: absolute;
+            top: 78%;
+            left: 43%;
+        }
+    }
+
+
+
+}
+.footer{
+    width: 100%;
+    height: 15vw;
+    background-color: rgb(0, 0, 0);
+    
+    .upper{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(0.4rem, 0.88vw, 3rem);
+        color: antiquewhite;
+        
+        h1{
+            font-size: clamp(0.6rem, 1.313vw, 4.5rem);
+        }
+
+        .links, .contacts{
+            width: 20%;
+            height: 95%;
+            box-sizing: border-box;
+            padding-top: clamp(0.4rem, 0.88vw, 3rem);
+        }
+
+        .emailLink{
+            width: 20%;
+            height: 95%;
+            box-sizing: border-box;
+            padding-top: clamp(0.4rem, 0.88vw, 3rem);
+
+            .emailSend{
+                margin-top: 0.5rem;
+                width: 100%;
+                height: 35%;
+                background-color: aquamarine;
+                display: flex;
+
+                .email{
+                    width: 87%;
+                    height: 100%;
+                }
+                .send{
+                    width: 13%;
+                    height: 100%;
+                }
+            }
+
+        }
+    }
+    
+    .lower{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        
+
+        .line{
+            width: 90%;
+            height: 100%;
+            background-color: transparent;
+            border: 0;
+            border-top: 0.1rem solid grey;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .icons{
+                width: 20%;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .socials{
+                    width: 20%;
+                    height: 80%;
+                    background-color: antiquewhite;
+                    border-radius: 50%;
+                }
+            }
+            h1{
+                color: white;
+                font-size: clamp(0.4rem, 0.88vw, 3rem);
+            }
+        }
+    }
+    
+}
